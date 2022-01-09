@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="gst.trainingcourse_ex11_thaonx4.daggerhilt.view.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listNoteFragment"
+        android:name="gst.trainingcourse_ex11_thaonx4.daggerhilt.view.fragment.ListNoteFragment"
+        android:label="fragment_list_note"
+        tools:layout="@layout/fragment_list_note" >
+        <action
+            android:id="@+id/action_listNoteFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="gst.trainingcourse_ex11_thaonx4.daggerhilt.view.fragment.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_listNoteFragment"
+            app:destination="@id/listNoteFragment" />
+    </fragment>
+</navigation>

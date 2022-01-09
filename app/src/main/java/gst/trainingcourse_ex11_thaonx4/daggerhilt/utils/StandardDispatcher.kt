@@ -1,0 +1,19 @@
+package gst.trainingcourse_ex11_thaonx4.daggerhilt.utils
+
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+
+class StandardDispatcher : DispatcherProvider {
+
+    override val main: CoroutineDispatcher
+        get() = Dispatchers.Main
+
+    override val io: CoroutineDispatcher
+        get() = Dispatchers.IO
+
+    override val default: CoroutineDispatcher
+        get() = Dispatchers.Default
+
+    override val undefined: CoroutineDispatcher
+        get() = Dispatchers.Unconfined
+}
